@@ -1,17 +1,16 @@
-// Toogle class active
-const navbarNav = document.querySelector('.navbar-nav');
-        const hamburger = document.querySelector('#hamburger-menu');
+// toggle class active
+const navbarnav = document.querySelector(".navbar-nav");
 
-//*ketika di klik hamburger menu di klik
-hamburger.addEventListener('click', function(e) {
-            e.preventDefault(); // supaya tidak reload halaman
-            navbarNav.classList.toggle('active');
-        });
+// ketika hamburger menu di klik
+document.querySelector("#hamburger-menu").onclick = () => {
+  navbarnav.classList.toggle("active");
+};
 
-// klik di luar menu
-        document.addEventListener('click', function(e) {
-            if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-                menu.classList.remove('active');
-            }
+// klik diluar sidebar untuk menghilangkan navbar
+const hamburger = document.querySelector("#hamburger-menu");
 
- });
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarnav.contains(e.target)) {
+    navbarnav.classList.remove("active");
+  }
+});
